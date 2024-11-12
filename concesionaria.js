@@ -22,9 +22,9 @@ const concesionaria = {
 
 
     totalDeVentas:function () {
-        let suma ;
+        let suma = 0 ;
         this.vehiculos.forEach(car=> {
-            if (car.vendido = true) {
+            if (car.vendido === true) {
                 suma = suma + car.precio;  
             }
         }
