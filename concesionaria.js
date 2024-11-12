@@ -20,6 +20,19 @@ const concesionaria = {
     },
     autosQuePuedeComprar:function (dinero) {
         return this.vehiculos.filter(car => car.precio <= dinero);
+    },
+    autosNuevos:function () {
+        return this.vehiculos.filter(km => km.km <= 100);
+    },
+    totalDeVentas:function () {
+        let suma = 0 ;
+        this.vehiculos.forEach(car=> {
+            if (car.vendido === true) {
+                suma = suma + car.precio;  
+            }
+        }
+        )
+    return  suma;
     }
 
 }
