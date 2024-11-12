@@ -14,14 +14,24 @@ const concesionaria = {
     autoFinanciable:function (cuotas) {
         const enVenta = this.autosEnventa();
         return enVenta.filter(car => car.cuotas >= cuotas);
-    },
-    listaDeVentas:function () {
-        return this.vehiculos.filter(element => element.vendido === true)
-    },
-    autosQuePuedeComprar:function (dinero) {
-        return this.vehiculos.filter(car => car.precio <= dinero);
     }
 
+    autosNuevos:function () {
+        return this.vehiculos.filter(km => km.car <= 100);
+    }
+
+    totalDeVentas:function () {
+        const Suma ;
+        this.vehiculos.forEach(car=> {
+            if (car.vendido = true) {
+                Suma = Suma + car.precio;  
+            }
+        }
+    )
+    return  Suma;
 }
+}
+
+
 
 module.exports = concesionaria;
